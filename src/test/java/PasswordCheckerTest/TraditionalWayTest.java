@@ -37,8 +37,22 @@ public class TraditionalWayTest {
     }
 
     @Test
+    void givenAString_DetectNoTwDigitsIsGiven(){
+        String password = "PassWord1";
+        String result = traditionalWay.checkPassword(password);
+        assertEquals("Password must have at least two digits", result);
+    }
+
+    @Test
+    void givenAString_DetectNoSpecialCharacterIsGiven(){
+        String password = "PassWord01";
+        String result = traditionalWay.checkPassword(password);
+        assertEquals("Password must have at least one special character", result);
+    }
+
+    @Test
     void givenAString_AssertSuccess(){
-        String password = "validPassword";
+        String password = "validPass12.";
         String result = traditionalWay.checkPassword(password);
         assertEquals("Success", result);
     }
