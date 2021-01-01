@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 // should have at least 2 digits
 // should have at least one special character
 public class TraditionalWay {
-    public String checkPassword(String password) {
+    public String checkPasswordAndSubmit(String password) {
         int length = password.length();
 
         if (length < 8) return "Password is under 8 characters";
@@ -25,6 +25,6 @@ public class TraditionalWay {
         Matcher m = p.matcher(password);
         if (!m.find()) return "Password must have at least one special character";
 
-        else return "Success";
+        else return "Submitted";
     }
 }
