@@ -9,6 +9,7 @@ import java.util.regex.Pattern;
 // should have at least one special character
 public class TraditionalWay {
     public String checkPasswordAndSubmit(String password) {
+        // have some logic here perhaps
         int length = password.length();
 
         if (length < 8) return "Password is under 8 characters";

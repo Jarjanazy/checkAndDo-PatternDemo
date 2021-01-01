@@ -5,13 +5,18 @@ import java.util.regex.Pattern;
 
 public class CheckAndDoWay {
 
-    public String checkPasswordLengthAndSubmit(String password) {
+    public String checkPassword(String password) {
+        // have some logic here perhaps
+        return checkPasswordLengthAndSubmit(password);
+    }
+
+    private String checkPasswordLengthAndSubmit(String password) {
         int length = password.length();
 
         if (length < 8) return "Password is under 8 characters";
 
         if (length > 14) return "Password is above 14 characters";
-        
+
         return checkPassWordCaseSensitivityAndSubmit(password);
     }
 
